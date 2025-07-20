@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyFlix - Movies</title>
+ <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Netflix Sans', Arial, sans-serif;
+    }
+    body {
+      background-color: #141414;
+      color: #fff;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0));
+      position: fixed;
+      width: 100%;
+      z-index: 100;
+    }
+    .logo {
+      font-size: 2rem;
+      color: #e50914;
+      font-weight: bold;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    nav a.active {
+      font-weight: bold;
+    }
+    .hero {
+      padding: 120px 50px 30px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .category {
+      margin-bottom: 40px;
+    }
+    .category-title {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    .movie-row {
+      display: flex;
+      overflow-x: auto;
+      gap: 15px;
+      padding: 15px 0;
+    }
+    .movie-row::-webkit-scrollbar {
+      display: none;
+    }
+    .movie-card {
+      flex: 0 0 auto;
+      width: 220px; /* Increased from 150px */
+      transition: transform 0.3s;
+    }
+    .movie-card:hover {
+      transform: scale(1.08); /* Slightly stronger hover effect */
+      z-index: 2; /* Bring hovered card to front */
+    }
+    .movie-card img {
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Added shadow for depth */
+    }
+</style>
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">MyFlix</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="movies.html" class="active">Movies</a>
+      <a href="series.html">TV Shows</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <h1>Movies</h1>
+
+    <!-- Trending Now -->
+    <div class="category">
+      <h2 class="category-title">Trending Now</h2>
+      <div class="movie-row">
+        <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/2VUmvqsHb6cEtdfscEA6fqqVzLg.jpg" alt="Stranger Things">
+        </div>
+        <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/wqfu3bPLJaEWJVk3QOm0rKhxf1A.jpg" alt="Loki">
+        </div>
+        <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/lVgE5oLzf7ABmzyASEVcjYyHI41.jpg" alt="Loki">
+        </div>
+        <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/2vHQBX5L4yoExTa55KmGIg2Q5s3.jpg" alt="Loki">
+        </div>
+        <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/tUae3mefrDVTgm5mRzqWnZK6fOP.jpg" alt="Loki">
+        </div>
+        <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/q0fGCmjLu42MPlSO9OYWpI5w86I.jpg" alt="Loki">
+        </div><div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/AEgggzRr1vZCLY86MAp93li43z.jpg" alt="Loki">
+        </div><div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/tObSf1VzzHt9xB0csanFtb3DRjf.jpg" alt="Loki">
+         </div><div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/9xjSHm0R9tII8JCWHS1VdbftFk1.jpg" alt="Loki">
+        </div>
+        <!-- Add 8 more trending movies -->
+        <div class="movie-card">
+          <img src="https://image.tmdb.org/t/p/w500/6kbAMLteGO8yyewYau6bJ683sw7.jpg" alt="The Last of Us">
+        </div>
+      </div>
+    </div>
+
+    <!-- Top 10 This Week -->
+    <div class="category">
+      <h2 class="category-title">Top 10 This Week</h2>
+      <div class="movie-row">
+        <div class="movie-card">
+          <img src="https://image.tmdb.org/t/p/w500/1LRLLWGvs5sZdTzuMqLEahb88Pc.jpg" alt="The Dark Knight">
+        </div>
+        <div class="movie-card">
+          <img src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" alt="The Godfather">
+        </div>
+      
+        <div class="movie-card">
+          <img src="https://image.tmdb.org/t/p/w500/tVxDe01Zy3kZqaZRNiXFGDICdZk.jpg" alt="The Matrix">
+        </div>
+         <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/6U0i0HsSCvhRW4IpGzdead6QRo3.jpg" alt="The Dark Knight">
+        </div>
+        <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/ktqPs5QyuF8SpKnipvVHb3fwD8d.jpg" alt="The Godfather">
+        </div>
+         <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/3lwlJL8aW6Wor9tKvME8VoMnBkn.jpg" alt="The Dark Knight">
+        </div>
+        <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/9xjSHm0R9tII8JCWHS1VdbftFk1.jpg" alt="The Godfather">
+        </div>
+         <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/mogHAoGIKnWT9ptZ7UhIsSSkoor.jpg" alt="The Dark Knight">
+        </div>
+        <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/6eGRuUyqeseIMx6Gnbrb2NUXZbt.jpg" alt="The Godfather">
+        </div>
+         <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/1HmB4WDx9DvHkKBVczVrkZAm8AA.jpg" alt="The Dark Knight">
+        </div>
+       
+      </div>
+    </div>
+
+    <!-- New Releases -->
+    <div class="category">
+      <h2 class="category-title">New Releases</h2>
+      <div class="movie-row">
+        <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/2VUmvqsHb6cEtdfscEA6fqqVzLg.jpg" alt="Parasite">
+        </div>
+        <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/wqfu3bPLJaEWJVk3QOm0rKhxf1A.jpg" alt="Fight Club">
+        </div>
+         <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/lVgE5oLzf7ABmzyASEVcjYyHI41.jpg" alt="Parasite">
+        </div>
+        <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/2vHQBX5L4yoExTa55KmGIg2Q5s3.jpg" alt="Fight Club">
+        </div>
+         <div class="movie-card">
+          <img src="https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg" alt="Parasite">
+        </div>
+        <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/q0fGCmjLu42MPlSO9OYWpI5w86I.jpg" alt="Fight Club">
+        </div>
+         <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/r3d6u2n7iPoWNsSWwlJJWrDblOH.jpg" alt="Parasite">
+        </div>
+        <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/ktqPs5QyuF8SpKnipvVHb3fwD8d.jpg" alt="Fight Club">
+        </div>
+         <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/9xjSHm0R9tII8JCWHS1VdbftFk1.jpg" alt="Parasite">
+        </div>
+        <div class="movie-card">
+          <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/xeEw3eLeSFmJgXZzmF2Efww0q3s.jpg" alt="Fight Club">
+        </div>
+        <!-- Add 8 more new releases -->
+        <div class="movie-card">
+          <img src="https://image.tmdb.org/t/p/w500/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg" alt="Inception">
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

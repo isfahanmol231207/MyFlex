@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFlix - Drama Series</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Drama Series Specific Styles */
+        .drama-hero {
+            background-image: linear-gradient(to right, rgba(20, 20, 20, 0.9) 0%, rgba(20, 20, 20, 0.5) 100%), 
+                            url('https://image.tmdb.org/t/p/original/7WUHnWGx5OO145IRxPDUkQSh4C7.jpg');
+            background-position: center 30%;
+        }
+        
+        .genre-tabs {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #333;
+        }
+        
+        .genre-tab {
+            background: none;
+            color: #999;
+            border: none;
+            padding: 0.5rem 0;
+            font-size: 1rem;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .genre-tab.active {
+            color: white;
+            font-weight: 600;
+        }
+        
+        .genre-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #e50914;
+        }
+        
+        .content-section {
+            margin-bottom: 3rem;
+            padding: 0 3rem;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .see-all {
+            color: #999;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .series-row {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        .series-card {
+            flex: 0 0 auto;
+            width: 220px;
+            transition: transform 0.3s ease;
+        }
+        
+        .series-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .series-poster {
+            width: 100%;
+            border-radius: 4px;
+            aspect-ratio: 2/3;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="logo">MyFlix</a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="movies.html">Movies</a>
+            <a href="series.html" class="nav-link active">TV Series</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Banner -->
+        <section class="hero-banner drama-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Game of Thrones</h1>
+                <p class="hero-description">
+                    "Noble families clash for control of the Seven Kingdoms as ancient enemies awaken in a gripping tale of power, betrayal, and survival."
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary">▶ Browse Drama</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Genre Tabs -->
+       <div class="genre-tabs">
+    <a href="all-drama.html" class="genre-tab active">All Drama</a>
+    <a href="crime-series.html" class="genre-tab">Crime</a>
+    <a href="romance-series.html" class="genre-tab">Romance</a>
+    <a href="historical-series.html" class="genre-tab">Historical</a>
+    <a href="thriller-series.html" class="genre-tab">Thriller</a>
+</div>
+
+        <!-- Trending This Month -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2 class="section-title"> Trending This Month</h2>
+                <a href="#" class="see-all">See All</a>
+            </div>
+            <div class="series-row">
+                <div class="series-card">
+                    <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/1QdXdRYfktUSONkl1oD5gc6Be0s.jpg" alt="The Last of Us" class="series-poster">
+                </div>
+                <div class="series-card">
+                    <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/qk3eQ8jW4opJ48gFWYUXWaMT4l.jpg" class="series-poster">
+                </div>
+                <div class="series-card">
+                    <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/41EWXLXTZO4MLb2BL28mWZuydyq.jpg" alt="Succession" class="series-poster">
+                </div>
+                <div class="series-card">
+                    <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/hgRMSOt7a1b8qyQR68vUixJPang.jpg" alt="The Crown" class="series-poster">
+                </div>
+                <div class="series-card">
+                    <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/l7N9aS6VyYvjelKoCB2eZge0Qky.jpg" alt="The Morning Show" class="series-poster">
+                </div>
+                <div class="series-card">
+                    <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/2zmTngn1tYC1AvfnrFLhxeD82hz.jpg" alt="Game of Thrones" class="series-poster">
+                </div>
+                <div class="series-card">
+                    <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/KoYWXbnYuS3b0GyQPkbuexlVK9.jpg" alt="Game of Thrones" class="series-poster">
+                </div>
+            </div>
+        </section>
+
+        <!-- New Releases -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2 class="section-title"> New Releases</h2>
+                <a href="#" class="see-all">See All</a>
+            </div>
+            <div class="series-row">
+                <div class="series-card">
+                    <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/gcSNS5cy1iOmYawIdJCzoc873rQ.jpg" alt="The Last of Us" class="series-poster">
+                </div>
+                <div class="series-card">
+                    <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/mWVDzFvAryOS4l1yA2ROpMTwQas.jpg" alt="House of the Dragon" class="series-poster">
+                </div>
+                <div class="series-card">
+                    <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/bTyp56ZWKsm9hAVJzBU7xRtBSAx.jpg" alt="Vikings: Valhalla" class="series-poster">
+                </div>
+                <div class="series-card">
+                    <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/imkU3fNak8NkXyCD0RJpAtP9jeK.jpg" alt="Stranger Things" class="series-poster">
+                </div>
+                <div class="series-card">
+                    <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/1LsYmbJHKp1bp1JxX7HkcOr9ddv.jpg" alt="The Witcher" class="series-poster">
+                </div>
+                <div class="series-card">
+                 <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/x0wiTO87UMiVCUe24nKaHlp7AIc.jpg" alt="The Witcher" class="series-poster">
+                </div>   
+        </section>
+
+        <!-- All-Time Favorites -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2 class="section-title"> All-Time Favorites</h2>
+                <a href="#" class="see-all">See All</a>
+            </div>
+            <div class="series-row">
+                <div class="series-card">
+                    <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/bPsxOpHVpVCX3hFz2fxnF1Vz3Dj.jpg" alt="Game of Thrones" class="series-poster">
+                </div>
+                <div class="series-card">
+                    <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/i2EEr2uBvRlAwJ8d8zTG2Y19mIa.jpg" alt="Breaking Bad" class="series-poster">
+                </div>
+                <div class="series-card">
+                    <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/88dAGv0ywrLJKCynkH226dBwe0i.jpg" alt="The Sopranos" class="series-poster">
+                </div>
+                <div class="series-card">
+                    <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/4HTfd1PhgFUenJxVuBDNdLmdr0c.jpg" alt="The Crown" class="series-poster">
+                </div>
+                <div class="series-card">
+                    <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/nddXOC8wYpIDv7giLzjjqIg8WDA.jpg" alt="Succession" class="series-poster">
+                </div>
+                <div class="series-card">
+                    <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/393BVqnVaioYBE5f3LMUwFRAwPQ.jpg" alt="The Wire" class="series-poster">
+                </div>
+                <div class="series-card">
+                    <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/3Cz7ySOQJmqiuTdrc6CY0r65yDI.jpg alt="Mad Men" class="series-poster">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#" class="footer-link">Audio Description</a>
+                <a href="#" class="footer-link">Help Center</a>
+                <a href="#" class="footer-link">Terms of Use</a>
+                <a href="#" class="footer-link">Privacy</a>
+            </div>
+            <p class="copyright">© 2023 MyFlix. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Genre tab functionality
+        document.querySelectorAll('.genre-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.genre-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                // Filter functionality would go here
+            });
+        });
+    </script>
+</body>
+</html>
